@@ -4395,9 +4395,11 @@
     localStorage.removeItem("data")
     document.getElementById("answerList").innerHTML = null;
     document.getElementById("question").value = null;
+    document.getElementById("getAnswer").value = null;
   }
 
   function getAnswer() {
+    document.getElementById("getAnswer").value = '检索中';
     if (!(document.getElementById("question").value && document.getElementById("question").value !== null && document.getElementById("question").value !== undefined)) {
       document.getElementById("getAnswer").innerHTML = "<span style='color: red'>请输入问题</span>";
       return;
