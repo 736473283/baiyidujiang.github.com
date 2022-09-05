@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Test</title>
+  <title>Study Machine</title>
 </head>
 <body>
 <div>
@@ -4409,7 +4409,6 @@
     }
 
     let jsonData = JSON.parse(localStorage.getItem("data"));
-    // let data = {"台风和飓风的不同点在于。|": "“产地”不同，不同国家称谓不同"};
     let answerList = [];
     Object.keys(jsonData).forEach((item, x, index) => {
       if (item.indexOf(question) > -1) {
@@ -4421,7 +4420,6 @@
         })
       }
     })
-    console.log(data['台风和飓风的不同点在于。|'], "data['台风和飓风的不同点在于。|']");
     console.log(answerList, "answer")
     if (answerList && answerList.length > 0) {
       let stringAns = "";
@@ -4430,18 +4428,8 @@
       })
       console.log(stringAns, 'res');
       document.getElementById("answerList").innerHTML = stringAns;
-      // answerList.forEach(item => {
-      //   let originText = document.getElementById("answerList").innerHTML
-      //   let subItem = "  <tr>\n" +
-      //     "          <th style=\"border: 1px black solid\">" + item.index + "</th>\n" +
-      //     "          <th style=\"border: 1px black solid\">" + item.queryKey + "</th>\n" +
-      //     "        <th style=\"border: 1px black solid\">" + item.fullQuestion + "</th>\n" +
-      //     "        <th style=\"border: 1px black solid\">" + item.answer + "</th>\n" +
-      //     "      </tr>"
-      //   console.log(originText, "originText")
-      //   document.getElementById("answerList").innerHTML = originText + subItem;
-      // })
     }
+    document.getElementById("getAnswer").innerHTML = `<span style='color: red'>检索完成，共有${answerList.length}个答案</span>`;
   }
 </script>
 <style>
