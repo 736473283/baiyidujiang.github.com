@@ -1,4 +1,3 @@
-let data = "{\"台风和飓风的不同点在于。|\": \"“产地”不同，不同国家称谓不同\"}";
 
 function initData() {
     const data = {
@@ -4436,7 +4435,7 @@ function getAnswer() {
     if (answerList && answerList.length > 0) {
         let stringAns = "";
         answerList.forEach(item => {
-            stringAns = stringAns + `<tr><td>${item.index}</td><td>${item.fullQuestion.replaceAll(item.queryKey, `<span style='color: red'>${item.queryKey}</span>`)}</td><td>${item.answer}</td></tr>`;
+            stringAns = stringAns + `<tr><td>${item.answer}</td><td>${item.fullQuestion.replaceAll(item.queryKey, `<span style='color: red'>${item.queryKey}</span>`)}</td><td>${item.index}</td></tr>`;
         })
         console.log(stringAns, 'res');
         document.getElementById("answerList").innerHTML = stringAns;
