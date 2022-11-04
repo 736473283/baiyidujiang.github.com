@@ -7,7 +7,7 @@
 </head>
 <body>
 <div>
-    <input id="question" placeholder="模糊查询问题"/>
+    <input id="question" onChange="getAnswer()" placeholder="模糊查询问题"/>
     <button onclick="getAnswer()">获取答案</button>
     <button onclick="flushCache()">清空缓存</button>
     <div id="getAnswer"></div>
