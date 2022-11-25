@@ -24,8 +24,9 @@ function getHttp({
 
 function initData() {
     getHttp({
-        url: 'https://ghproxy.com/https://raw.githubusercontent.com/McMug2020/XXQG_TiKu/main/%E9%A2%98%E5%BA%93_McMug2020.json',
-        params: '',
+      // url: 'https://ghproxy.com/https://raw.githubusercontent.com/McMug2020/XXQG_TiKu/main/%E9%A2%98%E5%BA%93_McMug2020.json',
+      url: 'https://raw.githubusercontent.com/mondayfirst/XXQG_TiKu/main/%E9%A2%98%E5%BA%93_%E6%8E%92%E5%BA%8F%E7%89%88.json',
+      params: '',
         success: (res) => {
             if (localStorage.getItem("data")) {
                 console.log('数据从localStorage加载完毕')
