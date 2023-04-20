@@ -23,6 +23,7 @@ var ringId = 0;
 var bgmId = 0;
 let count = 0;
 let countFlag = false;
+let inter = null;
 
 function startAnimate() {
     $(".count").css("transform", "scale(1.1)");
@@ -47,6 +48,14 @@ function counter() {
     } else {
         ringId = sound.play();
     }
+}
+
+function autoCounter(){
+	inter = setInterval(()=>{counter();},100)
+}
+
+function stopAutoCounter(){
+	clearInterval(inter);
 }
 
 $(document).keydown(function (e) {
